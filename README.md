@@ -3,15 +3,24 @@
 - This is first compiler I made. If you want to point out about my program or README.md's English, please make issue or pull request.
 
 - I made this compiler to deepen understanding my school's lesson.
-- Update frequency of README.md and repository are low.
+
+- gcc上で動作することを確認しています。
+- このレポジトリは私が作った初めてのコンパイラです。プログラムやREADME.mdについて指摘したい点があれば、イシューまたはプルリクエストをたててください。
+- 学校の授業の理解を深めるためにこのコンパイラを作っています。
 
 ## Lexical Analysis
 - convert words of a text file to tokens.
 - output tokens on console.
 - this program can analyze up to 128 words.
 
+- テキストファイルの文字列をトークン列に変換します。
+- トークン列をコンソールに出力します。
+- 128単語まで解析を行うことができます。
+
 ### How to Use
 Put a text file (a.txt) to analyze in lexical analysis directory.And, input follow commands in lexical analysis directory.
+
+テキストファイルをlexical analysisディレクトリにおいてください。そして、以下のコマンドをlexical analysisディレクトリ内で入力してください。
 
 ```gcc -o word main.c word.c```
 
@@ -19,6 +28,8 @@ Put a text file (a.txt) to analyze in lexical analysis directory.And, input foll
 
 ### Kinds of Token
 tokens define on `enum TOKEN(lexical analysis/word.h)` and `char token_names(lexical analysis/word.c)`
+
+`enum TOKEN(lexical analysis/word.h)` と `char token_names(lexical analysis/word.c)`において定義されているトークンの種類です。
 |Token Name|Symbol|
 |:-:|:-:|
 |error|undefined symbol or end of file|
