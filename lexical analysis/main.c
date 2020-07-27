@@ -3,6 +3,66 @@
 
 int main(int args_num, char** args)
 {
+	
+	const char token_names[][50] = 
+	{
+		"error",
+		"white space",
+		"identifier",
+		"number",
+		"semi colon",
+		"equal",
+		"equal equal",
+		"bigger",
+		"bigger equal",
+		"smaller",
+		"smaller equal",
+		"left parenthsis",
+		"right parenthsis",
+		"plus",
+		"minus",
+		"asterisk",
+		"slash",
+		"percent",
+		"single quotation",
+		"double quotation",
+		"comment start",
+		"comment end",
+		
+		"auto",
+		"break",
+		"case",
+		"char",
+		"const",
+		"continue",
+		"default",
+		"do",
+		"double",
+		"else",
+		"enum",
+		"extern",
+		"float",
+		"for",
+		"goto",
+		"if",
+		"int",
+		"long",
+		"register",
+		"return",
+		"short",
+		"signed",
+		"sizeof",
+		"static",
+		"struct",
+		"switch",
+		"typedef",
+		"union",
+		"unsigned",
+		"void",
+		"volatile",
+		"while"
+	};
+
 	FILE* fp;
 	fp = fopen(args[1], "r");
 	
@@ -26,13 +86,14 @@ int main(int args_num, char** args)
 		tokens[idx++] = state;
 		count++;
 	}
-	while(state != ERROR && count <= 128);
+	while(count <= 128);
 	
 	
 	for(int i = 0; i < 128; i++)
 	{		
 		printf("%s\n", token_names[tokens[i]]);
 	}
+	printf("%s\n", token_names[tokens[12]]);
 	
 	fclose(fp);
 	return 0;

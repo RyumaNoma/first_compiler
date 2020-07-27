@@ -19,11 +19,11 @@
 #define Minus "-"
 #define Aster "*"
 #define Slash "/"
-//#define Comst "/*"
-//#define Comend "*/"
 #define Percent "%"
 #define Singlequ "'"
 #define Doublequ "\""
+//#define Comst "/*"
+//#define Comend "*/"
 #define SOF '\0'
 
 typedef enum
@@ -45,14 +45,46 @@ typedef enum
 	MINUS,
 	ASTER,
 	SLASH,
-	COMST,
-	COMEND,
 	PERCENT,
 	SINGLEQU,
 	DOUBLEQU,
+	COMST,
+	COMEND,
+	
+	AUTO,
+	BREAK,
+	CASE,
+	CHAR,
+	CONST,
+	CONTINUE,
+	DEFAULT,
+	DO,
+	DOUBLE,
+	ELSE,
+	ENUM,
+	EXTERN,
+	FLOAT,
+	FOR,
+	GOTO,
+	IF,
+	INT,
+	LONG,
+	REGISTER,
+	RETURN,
+	SHORT,
+	SIGNED,
+	SIZEOF,
+	STATIC,
+	STRUCT,
+	SWITCH,
+	TYPEDEF,
+	UNION,
+	UNSIGNED,
+	VOID,
+	VOLATILE,
+	WHILE
 } TOKEN;
-
-extern const char token_names[][50];
 
 int char_pos(char key, char* char_group);
 TOKEN get_token(FILE* fp, char* first_char);
+TOKEN get_keyword(char* word);
