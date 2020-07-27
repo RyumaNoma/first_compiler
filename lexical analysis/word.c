@@ -4,8 +4,6 @@
 #define TRUE 1
 #define FALSE 0
 
-//•¶š—ñchar_group‚Ì’†‚É•¶škey‚ª‚ ‚é‚©‚ğ”»•Ê‚·‚é
-//‚ ‚é‚È‚çA“Y‚¦š‚ğ•Ô‚·
 int char_pos(char key, char* char_group)
 {
 	int index = 0;
@@ -303,3 +301,62 @@ TOKEN get_keyword(char* word)
 	
 	return ID;
 }
+
+const char token_names[][50] = 
+{
+	"error",
+	"white space",
+	"identifier",
+	"number",
+	"semi colon",
+	"equal",
+	"equal equal",
+	"bigger",
+	"bigger equal",
+	"smaller",
+	"smaller equal",
+	"left parenthsis",
+	"right parenthsis",
+	"plus",
+	"minus",
+	"asterisk",
+	"slash",
+	"percent",
+	"single quotation",
+	"double quotation",
+	"comment start",
+	"comment end",
+	
+	"auto",
+	"break",
+	"case",
+	"char",
+	"const",
+	"continue",
+	"default",
+	"do",
+	"double",
+	"else",
+	"enum",
+	"extern",
+	"float",
+	"for",
+	"goto",
+	"if",
+	"int",
+	"long",
+	"register",
+	"return",
+	"short",
+	"signed",
+	"sizeof",
+	"static",
+	"struct",
+	"switch",
+	"typedef",
+	"union",
+	"unsigned",
+	"void",
+	"volatile",
+	"while"
+};

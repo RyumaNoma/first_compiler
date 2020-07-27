@@ -88,3 +88,4 @@ typedef enum
 int char_pos(char key, char* char_group);
 TOKEN get_token(FILE* fp, char* first_char);
 TOKEN get_keyword(char* word);
+extern const char token_names[][50];
