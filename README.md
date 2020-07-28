@@ -8,7 +8,7 @@
 - このレポジトリは私が作った初めてのコンパイラです。プログラムやREADME.mdについて指摘したい点があれば、イシューまたはプルリクエストをたててください。
 - 学校の授業の理解を深めるためにこのコンパイラを作っています。
 
-## Lexical Analysis
+# Lexical Analysis
 - convert words of a text file to tokens.
 - output tokens on text file.
 - this program can analyze up to 128 words.
@@ -17,7 +17,7 @@
 - トークン列をテキストファイルに出力します。
 - 128単語まで解析を行うことができます。
 
-### How to Use
+## How to Use
 Put a text file (a.txt) to analyze in lexical analysis directory.And, input follow commands in lexical analysis directory.
 
 テキストファイルをlexical analysisディレクトリにおいてください。そして、以下のコマンドをlexical analysisディレクトリ内で入力してください。
@@ -26,10 +26,15 @@ Put a text file (a.txt) to analyze in lexical analysis directory.And, input foll
 
 ```./word a.txt```
 
-### Kinds of Token
-tokens define on `enum TOKEN(lexical analysis/word.h)` and `char token_names(lexical analysis/word.c)`
+## Kinds of Token and Keyword
+Tokens and keywords define on `enum TOKEN(lexical analysis/word.h)` and `char token_names(lexical analysis/word.c)`
 
-`enum TOKEN(lexical analysis/word.h)` と `char token_names(lexical analysis/word.c)`において定義されているトークンの種類です。
+Keywords are same with a C language.
+
+`enum TOKEN(lexical analysis/word.h)` と `char token_names(lexical analysis/word.c)`において定義されているトークンとキーワードの種類です。
+
+キーワードはC言語と同じです。
+
 |Token Name|Symbol|
 |:-:|:-:|
 |error|undefined symbol or end of file|
@@ -54,3 +59,12 @@ tokens define on `enum TOKEN(lexical analysis/word.h)` and `char token_names(lex
 |percent|%|
 |single quotation|'|
 |double quotation|"|
+
+|Keywords|||||
+|:-:|:-:|:-:|:-:|:-:|:-:|
+|auto|break|case|char|const|continue|
+|default|do|double|else|enum|extern|
+|float|for|goto|if|int|long|
+|register|return|short|signed|sizeof|static|
+|struct|switch|typedef|union|unsigned|void|
+|volatile|while|
