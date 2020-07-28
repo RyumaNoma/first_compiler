@@ -60,7 +60,7 @@ Keywords are same with a C language.
 |single quotation|'|
 |double quotation|"|
 
-|Keywords|||||
+|Keywords||||||
 |:-:|:-:|:-:|:-:|:-:|:-:|
 |auto|break|case|char|const|continue|
 |default|do|double|else|enum|extern|
