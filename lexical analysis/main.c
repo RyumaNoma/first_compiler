@@ -27,14 +27,23 @@ int main(int args_num, char** args)
 		count++;
 	}
 	while(count <= 128);
-	
-	
-	for(int i = 0; i < 128; i++)
-	{		
-		printf("%s\n", token_names[tokens[i]]);
-	}
-	printf("%s\n", token_names[tokens[12]]);
-	
+
 	fclose(fp);
+	
+	// output to text file
+	FILE* output_file_stream;
+	if ((output_file_stream = fopen("lexical_analysis.txt", "w")) == NULL)
+	{
+		printf("error : can not open output_file_stream\n");
+		return 0;
+	}
+
+	for(int i = 0; i < 128; i++)
+	{
+		fprintf(output_file_stream, "%s\n", token_names[tokens[i]]);
+	}
+
+	fclose(output_file_stream);
+
 	return 0;
 }
