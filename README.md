@@ -8,6 +8,11 @@
 - このレポジトリは私が作った初めてのコンパイラです。プログラムやREADME.mdについて指摘したい点があれば、イシューまたはプルリクエストをたててください。
 - 学校の授業の理解を深めるためにこのコンパイラを作っています。
 
+# Index
+- [Lexical Analysis](#lexical-analysis)
+    - [How to Use](#how-to-use)
+    - [Kinds of Token and Keyword](#kinds-of-token-and-keyword)
+
 # Lexical Analysis
 - convert words of a text file to tokens.
 - output tokens on text file.
