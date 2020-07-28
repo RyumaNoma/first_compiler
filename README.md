@@ -10,11 +10,11 @@
 
 ## Lexical Analysis
 - convert words of a text file to tokens.
-- output tokens on console.
+- output tokens on text file.
 - this program can analyze up to 128 words.
 
 - テキストファイルの文字列をトークン列に変換します。
-- トークン列をコンソールに出力します。
+- トークン列をテキストファイルに出力します。
 - 128単語まで解析を行うことができます。
 
 ### How to Use
