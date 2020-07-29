@@ -5,7 +5,7 @@
 
 #define Alphabet "abcdefghijklmnopqrstuvwxyz"
 #define Digit "0123456789"
-#define WhiteSpace "\t\n "
+#define WhiteSpace "\t\r\n "
 #define Semicol ";"
 #define Eq "="
 #define Big ">"
