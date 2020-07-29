@@ -24,6 +24,7 @@
 #define Doublequ "\""
 //#define Comst "/*"
 //#define Comend "*/"
+#define Point "."
 #define SOF '\0'
 
 typedef enum
@@ -32,6 +33,7 @@ typedef enum
 	WHITESPACE,
 	ID,
 	NUM,
+	FLOAT_NUM,
 	SEMICOL,
 	EQ,
 	EQEQ,

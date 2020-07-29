@@ -41,8 +41,11 @@ TOKEN get_token(FILE* fp, char* first_char)
 {
 	char c;
 	char last_char;
+	//remember word
 	char word[128];
 	int idx = 0;
+	//count decimal point
+	int count = 0;
 		
 	if(*first_char == SOF)
 	{
@@ -136,14 +139,26 @@ TOKEN get_token(FILE* fp, char* first_char)
 	}
 num:
 	c = fgetc(fp);
-	if(char_pos(c, Digit) >= 0)
+	if(char_pos(c, Digit) >= 0 && count <= 1)
 	{
+		goto num;
+	}
+	else if(char_pos(c, Point) >= 0)
+	{
+		count++;
 		goto num;
 	}
 	else
 	{
 		*first_char = c;
-		return NUM;
+		if(count == 1)
+		{
+			return FLOAT_NUM;
+		}
+		else
+		{
+			return NUM;	
+		}
 	}
 id:
 	c = fgetc(fp);
@@ -308,6 +323,7 @@ const char token_names[][50] =
 	"white space",
 	"identifier",
 	"number",
+	"float number",
 	"semi colon",
 	"equal",
 	"equal equal",
