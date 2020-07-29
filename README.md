@@ -43,9 +43,10 @@ Keywords are same with a C language.
 |Token Name|Symbol|
 |:-:|:-:|
 |error|undefined symbol or end of file|
-|white space| (space) \| \t \| \n|
-|identifier|alphabet{alphabet \| digit}|
+|white space| (space) \| \t \| \n \| \r|
+|identifier|alphabet{ alphabet \| digit }|
 |number|digit { digit }|
+|float number|digit{ digit }.{ digit }|
 |semi colon|;|
 |equal|=|
 |equal equal|==|
